@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonStart"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="175dp"
+        android:layout_height="37dp"
+        android:background="#6378e0"
+        android:cursorVisible="true"
+        android:fontFamily="casual"
+        android:onClick="onClickStart"
+        android:text="Начать тренировку"
+        android:textColor="#fff"
+        android:textColorHighlight="#bcc3e5"
+        android:textColorHint="#bcc3e5"
+        android:textColorLink="#bcc3e5"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485"
+        tools:ignore="MissingConstraints"
+        tools:text="Начать тренировку" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="151dp"
+        android:layout_height="37dp"
+        android:background="#6378e0"
+        android:cursorVisible="true"
+        android:fontFamily="casual"
+        android:onClick="onClickStop"
+        android:text="Cтоп"
+        android:textColor="#fff"
+        android:textColorHighlight="#bcc3e5"
+        android:textColorHint="#bcc3e5"
+        android:textColorLink="#bcc3e5"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.896"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.606"
+        tools:ignore="MissingConstraints"
+        tools:text="Cтоп" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="151dp"
+        android:layout_height="37dp"
+        android:background="#6378e0"
+        android:cursorVisible="true"
+        android:fontFamily="casual"
+        android:text="Закончить"
+        android:textColor="#fff"
+        android:textColorHighlight="#bcc3e5"
+        android:textColorHint="#bcc3e5"
+        android:textColorLink="#bcc3e5"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.723"
+        tools:ignore="MissingConstraints"
+        tools:text="Обнулить" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="415dp"
+        android:layout_height="215dp"
+        android:background="#6378E0"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageButton
+            android:id="@+id/buttonNovigation"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_marginLeft="300dp"
+            android:background="#6378e0"
+            app:srcCompat="@android:drawable/ic_menu_mylocation" />
+
+        <ImageButton
+            android:id="@+id/buttonMenu"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="-55dp"
+            android:background="#6378e0"
+            app:srcCompat="@android:drawable/ic_dialog_dialer" />
+
+        <Chronometer
+            android:id="@+id/time"
+            android:layout_width="118dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="150dp"
+            android:layout_marginBottom="120dp"
+            android:textColor="#fff"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="110dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="-120dp"
+            android:layout_marginEnd="150dp"
+            android:layout_marginRight="150dp"
+            android:text="Время"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonMenu" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="176dp"
+        android:layout_height="218dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.64"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="Бег"
+            android:textColorHighlight="#6378e0"
+            android:textColorLink="#6378e0"
+            android:textCursorDrawable="@color/colorAccent"
+            tools:layout_editor_absoluteX="51dp"
+            tools:layout_editor_absoluteY="374dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="Пресс"
+            android:textColorHighlight="#6378e0"
+            android:textColorLink="#6378e0"
+            android:textCursorDrawable="@color/colorAccent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="384dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="Подтягивание"
+            android:textColorHighlight="#6378e0"
+            android:textColorLink="#6378e0"
+            android:textCursorDrawable="@color/colorAccent" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="Отжимание"
+            android:textColorHighlight="#6378e0"
+            android:textColorLink="#6378e0"
+            android:textCursorDrawable="@color/colorAccent" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textCoordinate"
+        android:layout_width="352dp"
+        android:layout_height="142dp"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.945" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
